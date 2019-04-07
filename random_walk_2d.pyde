@@ -32,25 +32,24 @@ def draw():
     stroke(255,0,0)
     point(x,y)
     
-    b=random(0,4.0)
-    if b<1:
-        print(-1,0)
-        x=x-off
-    elif b<=1 and b<2:
-        print (+1,0)
-        x=x+off
-    elif b<=2 and b<3:
-        print(0,-1)
-        y=y-off
-    elif b<=3 and b<4:
-        print(0,+1)
-        y=y+off
+    b=random(1)
+    if b<0.5:
+        if b<0.25:
+            print(-1,0)
+            x=x-off
+        else:
+            print (+1,0)
+            x=x+off
+    else:
+        if b<0.75:
+            y=y-off
+        else:
+             y=+off
     
     
     if x>a/2 or x<-a/2:
         x=0
     if y>a/2 or y<-a/2:
         y=0
-    delay(350)
     
     
